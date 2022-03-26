@@ -28,6 +28,10 @@
     ],
     "rules": {
       "react/jsx-filename-extension":"off",
+      "import/prefer-default-export":"off",
+      "no-param-reassign":"off",
+      "prefer-destructuring":"off",
+      "camelcase":"off",
       "import/extensions": [
         "error",
         "ignorePackages",
