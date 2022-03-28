@@ -73,8 +73,6 @@ export const fetchStockDetails = async ({ state, effects }, ticker) => {
       state.stockDetails.data = Mapping;
       state.stockDetails.loading = false;
     }
-    state.stockDetails.data = stocks.body.results[0];
-    state.stockDetails.loading = false;
   } else if (stocks.status === 429) {
     Alert.alert(stocks.body.error);
   } else {

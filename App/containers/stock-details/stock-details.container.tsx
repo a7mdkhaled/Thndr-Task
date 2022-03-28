@@ -26,6 +26,7 @@ function StockDetails({ route }: DetailsTypes) {
   }, []);
 
   if (stockDetails.loading) return <Loader />;
+
   const {
     stockName,
     stockTicker,
