@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, View as DefaultView } from 'react-native';
-import Colors from '../../constants/Colors';
+import Colors from '../../../constants/Colors';
 
 type ScreenContainerProps = {
   children: any;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import debounce from 'lodash.debounce';
 import { ActivityIndicator, Text } from 'react-native';
-import { ScreenContainer } from '../../components/Container';
+import { ScreenContainer } from '../../components/container/Container';
 import SearchBar from '../../components/searchbar-component/searchbar.component';
 import StocksList from './components/stock-list-component/stocks-list.component';
 import { Loader } from './explore.styles';
