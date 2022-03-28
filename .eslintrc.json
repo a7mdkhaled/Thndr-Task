@@ -32,6 +32,7 @@
       "no-param-reassign":"off",
       "prefer-destructuring":"off",
       "camelcase":"off",
+      "no-return-assign":"off",
       "import/extensions": [
         "error",
         "ignorePackages",
