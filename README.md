@@ -1,7 +1,7 @@
-## build
-yarn &&
-    to run on IOS: yarn ios
-    to run on web : yarn web
+## build 
+    - yarn 
+    - to run on IOS: yarn ios
+    - to run on web : yarn web
 
 ## cypress
     - npx cypress open
@@ -9,25 +9,19 @@ yarn &&
 ## jest
     - yarn test 
 
+## Structure of the project ###
 
-### Structure of the project
+# App/Containers
 
-## App/Containers:
-
-### /container name
-## contains 
+## /container-name contains: 
     - .container
     - .styles
     - .test
     - components ( Related to this specific container)
     
-## Component: (shared components)
-    
-### path: App/components
+# App/Components: (related to the whole app)
 
-### /component name:
-
-## contains
+## /component-name contains:
     - .component
     - .styles
     - .test
