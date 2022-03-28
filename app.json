@@ -19,7 +19,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ahmedkhaledd.Thndr-Task"
     },
     "android": {
       "adaptiveIcon": {

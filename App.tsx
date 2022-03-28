@@ -5,9 +5,9 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { createOvermind } from 'overmind';
 import { Provider } from 'overmind-react';
 
-import useCachedResources from './hooks/useCachedResources';
-import useColorScheme from './hooks/useColorScheme';
-import Navigation from './navigation';
+import useCachedResources from './App/hooks/useCachedResources';
+import useColorScheme from './App/hooks/useColorScheme';
+import Navigation from './App/navigation';
 import { config } from './App/overmind';
 
 export default function App() {

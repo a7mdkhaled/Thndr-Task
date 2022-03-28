@@ -6,10 +6,10 @@ import {
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
-import ExploreScreen from '../App/containers/explore/explore.container';
-import StockDetails from '../App/containers/stock-details/stock-details.container';
+import ExploreScreen from '../containers/explore/explore.container';
+import StockDetails from '../containers/stock-details/stock-details.container';
 import Colors from '../constants/Colors';
-import { RootStackParamList } from '../types';
+import { RootStackParamList } from '../../types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
