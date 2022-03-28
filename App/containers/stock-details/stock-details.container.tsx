@@ -5,20 +5,27 @@ import { useOvermind, useActions } from '../../overmind';
 import AboutSection from './components/about-section/about-section.component';
 import StatisticsSection from './components/statistics-section/statistics-section.component';
 import { Title, SubTitle } from './stock-details.styles';
+import { Loader } from '../explore/explore.styles';
 
-type DetailsProps = {
+type DetailsTypes = {
   route: { params: { ticker: string } };
 };
-function StockDetails({ route }: DetailsProps) {
-  const { tickerDetails }: any = useOvermind();
-  const { fetchStockDetails }: any = useActions();
+
+type DataTypes = {
+  [key: string]: string;
+};
+
+function StockDetails({ route }: DetailsTypes) {
+  const { stockDetails } = useOvermind();
+  const { fetchStockDetails } = useActions();
   const { ticker } = route.params;
-  const { data } = tickerDetails;
+  const { data } = stockDetails;
 
   useEffect(() => {
     fetchStockDetails(ticker);
   }, []);
 
+  if (stockDetails.loading) return <Loader />;
   const {
     stockName,
     stockTicker,
@@ -29,7 +36,8 @@ function StockDetails({ route }: DetailsProps) {
     stockDescription,
     stockIndustry,
     url,
-  } = data;
+  }: DataTypes = data;
+
   return (
     <ScreenContainer>
       <ScrollView>

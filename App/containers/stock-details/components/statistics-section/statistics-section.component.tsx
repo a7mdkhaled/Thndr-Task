@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
   SectionTitle,
   Pricetitle,
@@ -12,6 +11,7 @@ type StatisticsProps = {
   closePrice: string;
   lowPrice: string;
 };
+
 function StatisticsSection({
   openPrice,
   highPrice,
@@ -21,22 +21,10 @@ function StatisticsSection({
   return (
     <StatisticsContainer>
       <SectionTitle>Statistices</SectionTitle>
-      <Pricetitle>
-        Open:
-        {openPrice}
-      </Pricetitle>
-      <Pricetitle>
-        highPrice:
-        {highPrice}
-      </Pricetitle>
-      <Pricetitle>
-        closePrice:
-        {closePrice}
-      </Pricetitle>
-      <Pricetitle>
-        lowPrice:
-        {lowPrice}
-      </Pricetitle>
+      <Pricetitle>{`Open Price: ${openPrice}`}</Pricetitle>
+      <Pricetitle>{`High Price: ${highPrice}`}</Pricetitle>
+      <Pricetitle>{`Close Price: ${closePrice}`}</Pricetitle>
+      <Pricetitle>{`Low Price: ${lowPrice}`}</Pricetitle>
     </StatisticsContainer>
   );
 }

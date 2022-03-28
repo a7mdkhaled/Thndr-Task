@@ -1,4 +1,5 @@
 import { createStateHook, createActionsHook } from 'overmind-react';
+import { IContext } from 'overmind';
 import * as actions from './actions';
 import * as effects from './effects';
 
@@ -10,7 +11,7 @@ type State = {
     next_url: String | null;
   };
   search: { data: []; loading: Boolean };
-  tickerDetails: { data: {}; loading: Boolean };
+  stockDetails: { data: {}; loading: Boolean };
 };
 
 const state: State = {
@@ -24,7 +25,7 @@ const state: State = {
     data: [],
     loading: false,
   },
-  tickerDetails: {
+  stockDetails: {
     data: {},
     loading: false,
   },
@@ -36,5 +37,7 @@ export const config = {
   effects,
 };
 
-export const useOvermind = createStateHook();
-export const useActions = createActionsHook();
+export type Context = IContext<typeof config>
+
+export const useOvermind = createStateHook<Context>();
+export const useActions = createActionsHook<Context>();

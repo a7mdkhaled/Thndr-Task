@@ -14,6 +14,7 @@ export function ScreenContainer(props: ContainerProps) {
     <SafeAreaView
       style={{
         backgroundColor: Colors.light.tint,
+        flex: 1,
       }}
     >
       <DefaultView

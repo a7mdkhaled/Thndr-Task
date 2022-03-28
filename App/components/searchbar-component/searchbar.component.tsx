@@ -7,7 +7,7 @@ type SearchProps = {
 
 function SearchBar({ onTextChange }: SearchProps) {
   return (
-    <SearchBarComponent testID="search" onChangeText={onTextChange} placeholder="Search!" />
+    <SearchBarComponent onChangeText={onTextChange} placeholder="Search!" />
   );
 }
 

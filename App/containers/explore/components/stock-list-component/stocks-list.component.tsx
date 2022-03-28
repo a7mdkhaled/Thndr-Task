@@ -45,7 +45,9 @@ function StocksList({
   return (
     <Container>
       <FlatList
-        data={data}
+        data={Object.values(data)}
+        accessibilityLabel="stocks"
+        testID="stocks"
         showsVerticalScrollIndicator={false}
         ItemSeparatorComponent={Seperator}
         // couldn't find a uniqe value so I had to use the index

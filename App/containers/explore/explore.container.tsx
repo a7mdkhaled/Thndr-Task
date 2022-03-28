@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import debounce from 'lodash.debounce';
+import { ActivityIndicator, Text } from 'react-native';
 import { ScreenContainer } from '../../components/Container';
 import SearchBar from '../../components/searchbar-component/searchbar.component';
 import StocksList from './components/stock-list-component/stocks-list.component';
@@ -55,7 +56,7 @@ function ExploreScreen({ navigation }: ExploreProps) {
     <ScreenContainer>
       <SearchBar onTextChange={onTextChange} />
       {stocks.loading ? (
-        <Loader />
+        <Loader testID="loading" accessibilityLabel="loading" />
       ) : (
         <StocksList
           data={searchValue ? search.data : stocks.data}
